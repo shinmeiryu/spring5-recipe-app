@@ -143,15 +143,14 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
     bologneseNotes.setRecipeNotes("It doesn’t take a lot of ingredients (or a lot of money) to make a classic Bolognese recipe. What it does take, though, is patience for the sauce to achieve the ideal authentic texture. You’re going to go low and slow—it’ll take around 3 hours, but most of that cook time is hands-off. \n" +
         "\n" +
         "All products featured on Bon Appétit are independently selected by our editors. However, when you buy something through the retail links below, we earn an affiliate commission.");
-    bologneseNotes.setRecipe(bologneseRecipe);
     bologneseRecipe.setNotes(bologneseNotes);
 
-    bologneseRecipe.getIngredients().add(new Ingredient("medium onion", new BigDecimal(1), each, bologneseRecipe));
-    bologneseRecipe.getIngredients().add(new Ingredient("celery stalk", new BigDecimal(1), each, bologneseRecipe));
-    bologneseRecipe.getIngredients().add(new Ingredient("small carrot", new BigDecimal(1), each, bologneseRecipe));
-    bologneseRecipe.getIngredients().add(new Ingredient("extra-virgin olive oil", new BigDecimal(3), tablespoon, bologneseRecipe));
-    bologneseRecipe.getIngredients().add(new Ingredient("ground beef", new BigDecimal(3), cup, bologneseRecipe));
-    bologneseRecipe.getIngredients().add(new Ingredient("salt", new BigDecimal(1), pinch, bologneseRecipe));
+    bologneseRecipe.addIngredient(new Ingredient("medium onion", new BigDecimal(1), each));
+    bologneseRecipe.addIngredient(new Ingredient("celery stalk", new BigDecimal(1), each));
+    bologneseRecipe.addIngredient(new Ingredient("small carrot", new BigDecimal(1), each));
+    bologneseRecipe.addIngredient(new Ingredient("extra-virgin olive oil", new BigDecimal(3), tablespoon));
+    bologneseRecipe.addIngredient(new Ingredient("ground beef", new BigDecimal(3), cup));
+    bologneseRecipe.addIngredient(new Ingredient("salt", new BigDecimal(1), pinch));
     //More ingredients to come...
 
     bologneseRecipe.getCategories().add(italianCategory);
